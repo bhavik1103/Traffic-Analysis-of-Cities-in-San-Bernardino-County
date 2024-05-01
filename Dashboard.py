@@ -20,7 +20,7 @@ cities_list = [
 ]
 option = st.selectbox("Select a Origin City Name:", cities_list)
 
-geojson_path = r"C:\Users\ayyag\Downloads\City_Boundaries.geojson"
+geojson_path = "City_Boundaries.geojson"
 gdf = gpd.read_file(geojson_path)
 selected_city_gdf = gdf[gdf['CITY'] == option]
 selected_city_geojson = selected_city_gdf.__geo_interface__
@@ -46,7 +46,7 @@ st.pydeck_chart(pdk.Deck(layers=[layer], initial_view_state=view_state))
 
 # Load data from CSV
 # def load_data():
-df = pd.read_csv(r"C:\Users\ayyag\Downloads\2021 VMT Data\Traffic_Analysis_Dataset.csv")
+df = pd.read_csv("Traffic_Analysis_Dataset.csv")
 
 # Fetch list of cities
 
@@ -66,7 +66,7 @@ counties = ['Los Angeles', 'Orange', 'Imperial', 'San Diego', 'Riverside']
 
 
 
-demo = pd.read_excel(r"C:\Users\ayyag\Downloads\2021 VMT Data\Demographics Data.xlsx")
+demo = pd.read_excel("Demographics Data.xlsx")
 
 demo1 = demo[demo['City Name']==option]
 
@@ -134,7 +134,7 @@ col5,col6 = st.columns(2)
 
 destn = col5.selectbox("Select a Destination City/County Name:", list)
 
-d1 = pd.read_csv(r"C:\Users\ayyag\Downloads\2021 VMT Data\Traffic_Analysis_Dataset.csv")
+d1 = pd.read_csv("Traffic_Analysis_Dataset.csv")
 
 day_type = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
 day_part = ['12AM', '1AM',
