@@ -1,7 +1,7 @@
 streamlit==1.31.0
 pandas==1.5.0
 plotly==5.10.0
-streamlit-extras==0.0.9
+streamlit-extras==0.4.2
 geopandas==0.12.1
 pydeck==0.8.0b4
 numpy==1.26.4
